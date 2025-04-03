@@ -101,14 +101,14 @@ export const AppointmentProvider: React.FC<{ children: ReactNode }> = ({ childre
       locationId: selectedLocation.id,
       date: selectedDate,
       timeSlotId: selectedTimeSlot.id,
-      status: 'scheduled',
+      status: 'scheduled' as 'scheduled' | 'completed' | 'cancelled',
       patientName,
       patientEmail,
       patientPhone,
       notes: patientNotes
     };
     
-    setAppointments([...appointments, newAppointment]);
+    setAppointments(prevAppointments => [...prevAppointments, newAppointment]);
     
     toast.success('Appointment booked successfully!');
     clearSelections();
@@ -117,7 +117,7 @@ export const AppointmentProvider: React.FC<{ children: ReactNode }> = ({ childre
   // Cancel an existing appointment
   const cancelAppointment = (id: string) => {
     const updatedAppointments = appointments.map(app => 
-      app.id === id ? { ...app, status: 'cancelled' } : app
+      app.id === id ? { ...app, status: 'cancelled' as const } : app
     );
     
     setAppointments(updatedAppointments);

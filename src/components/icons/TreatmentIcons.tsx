@@ -2,7 +2,7 @@
 import React from 'react';
 import { 
   Stethoscope, 
-  Tooth, 
+  ActivitySquare, // Replace Tooth with ActivitySquare
   Eye, 
   Hand, 
   Bone, 
@@ -50,7 +50,7 @@ export const TreatmentIcon: React.FC<TreatmentIconProps> = ({
 }) => {
   const iconMap = {
     'stethoscope': Stethoscope,
-    'tooth': Tooth,
+    'tooth': ActivitySquare, // Replace Tooth with ActivitySquare
     'eye': Eye,
     'hand': Hand,
     'bone': Bone,

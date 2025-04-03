@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { TreatmentIcon } from './icons/TreatmentIcons';
 import { Button } from '@/components/ui/button';
 import { format, formatDistanceToNow, differenceInMilliseconds } from 'date-fns';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import { Appointment } from '@/types';
 
 interface AppointmentTimerProps {
