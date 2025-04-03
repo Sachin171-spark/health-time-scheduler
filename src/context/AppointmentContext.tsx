@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { Treatment, Location, TimeSlot, Appointment } from '../types';
 import { treatments, locations, generateTimeSlots, sampleAppointments } from '../data/mockData';
 import { format, isSameDay } from 'date-fns';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 
 interface AppointmentContextType {
   // Data
